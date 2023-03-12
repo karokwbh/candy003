@@ -5,7 +5,9 @@
 let list = [false, 1, 0, -1, 2, 0, 1, 3, "a"]
 
 function moveZerosToEnd(arr) {
-  // 程式碼寫在這裡
+    const notZeroArr = arr.filter((element) => element !== 0);
+    const zeroArr = arr.filter((element) => element === 0);
+    return [...notZeroArr, ...zeroArr];
 }
 
 let result = moveZerosToEnd(list)
